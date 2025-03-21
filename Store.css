@@ -1,0 +1,274 @@
+body {
+    font-family: 'Brush Script MT', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    scroll-behavior: smooth;
+}
+html {
+    scroll-behavior: smooth;
+  }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: url('Shoes 2.jpg') no-repeat center center;
+    background-size: cover;
+    height: 75px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
+}
+
+.logo img {
+    height: 75px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background: white;
+    color: black;
+    border-radius: 5px;
+}
+
+.cart-icon {
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.cart-icon:hover {
+    color: red;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.mySlides {
+    display: none;
+    animation: fade 1s ease-in-out;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+img {
+    width: 100%;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease-in-out;
+}
+
+.active, .dot:hover {
+    background-color: white;
+}
+
+.product-section {
+    text-align: center;
+    padding: 50px;
+    margin-top: 120px;
+}
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.product {
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.9s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+.colors {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+.color {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.black { background: black; }
+.beige { background: beige; }
+.red { background: red; }
+.purple { background: rgb(128, 0, 128); }
+.white { background: white; }
+.blue { background: blue; }
+.green { background: green; }
+
+.slide-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.slide-text {
+    max-width: 400px;
+    color: white;
+}
+
+.slide-text h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.slide-text p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+.sneaker-section .product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: 90%;
+    margin: auto;
+}
+
+.parallel-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+}
+
+.parallel-images img {
+    width: 48%; 
+    border-radius: 8px;
+    gap: 10px;
+}
+
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgb(155, 147, 147);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: opacity 0.8s ease-in-out, visibility 0.8s;
+}
+
+
+.loading-logo {
+    width: 400px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards, pulse 1.5s infinite alternate;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+contact {
+    background-image: url('../imgs/download.jpg');
+    background-size: cover;
+}
+
+.contact h2 {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.contact .contact-form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+}
+
+.contact form input{
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+.contact form textarea {
+    resize: none;
+    height: 130px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+}
+
+.contact form input[type="submit"] {
+    width: 130px;
+    height: 40px;
+    padding: 0;
+    line-height: 40px;
+    background-color: #ef44f8;
+    color: white;
+    margin: 0 auto;
+    display: block;
+}
+
